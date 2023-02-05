@@ -5,9 +5,14 @@ const mongoose = require(`mongoose`);
 
 const app = express();
 // app listening
-app.listen(7777);
+app.listen(2244);
 
-app.get((req , res)=>{
-    res.send("<h2> change to interset </h2>")
-})
+// using static files
+app.set('view engine' , 'ejs')
+app.use(express.static("./static-files"));
 
+//veiwing engine
+
+app.get('/'  , (req, res) =>{
+  res.render("home");
+});
