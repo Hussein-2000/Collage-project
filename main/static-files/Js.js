@@ -1,5 +1,4 @@
  // expand  the header with user is in top 
-//  const expand = 
 
 window.addEventListener('scroll', () => {
     let header = document.getElementsByTagName('header')[0];
