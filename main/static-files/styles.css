@@ -1,7 +1,54 @@
-body{
-    background-color: rgb(168, 47, 47);
+/* Colors  */
+/* CSS HEX */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    font-family: 'Varela Round', sans-serif;
 }
 
-h2 {
-    color: green;
+:root {
+    --light-cornflower-blue: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --prussian-blue: #023047ff;
+    --selective-yellow: #ffb703ff;
+    --tangerine: #fb8500ff;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-cornflower-blue);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header:hover > #name{
+    display: block;
+}
+
+#name {
+    display: none;
+}
+
+.nav-img img {
+    width: 140px;
+}
+
+.nav-text ul {
+    list-style-type: none;
+    /* display: inline-block; */
+}
+.nav-text li{
+    display: inline-block;
+    padding: 10px 9px;
+}
+.nav-text a{
+    text-decoration: none;
+    font-size: 14pt;
+    color: black;
+
 }
