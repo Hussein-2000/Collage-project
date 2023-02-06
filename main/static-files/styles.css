@@ -1,11 +1,10 @@
-/* Colors  */
-/* CSS HEX */
+/* Font  */
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
 *{
     font-family: 'Varela Round', sans-serif;
 }
 
+/* Colors CSS HEX  */
 :root {
     --light-cornflower-blue: #8ecae6ff;
     --blue-green: #219ebcff;
@@ -13,34 +12,61 @@
     --selective-yellow: #ffb703ff;
     --tangerine: #fb8500ff;
 }
-
-
+/* Body  */
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--light-cornflower-blue);
+    background-color: white;
 }
 
+/*############################################ NavBar ############################################ */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    background-color: var(--prussian-blue);
+    height: 400px;
+
 }
-header:hover > #name{
+header.expand {
+    height: 0px;
+    background-color: aliceblue;
+}
+/* Title Animation */
+#JUS-title {
+    height: 0;
+    transition: 1s ease-in-out;
+    text-align: center;
+}
+#JUS-title h1{
+    margin-top: 0;
+    color: var(--selective-yellow);
+}
+header:hover > #JUS-title{
     display: block;
+    height: 100px;
 }
 
-#name {
-    display: none;
-}
-
+/* Image Animation */
 .nav-img img {
-    width: 140px;
+    width: 120px;
+    /* transition: 1s ease-in-out; */
 }
 
+/* header .nav-text:hover .nav-img img{
+    transition: 1s ease-in-out;
+    width: 150px;
+} */
+
+/* Text  */
+.nav-text{
+    padding: 0;
+}
 .nav-text ul {
     list-style-type: none;
-    /* display: inline-block; */
+    margin: 0;
 }
 .nav-text li{
     display: inline-block;
@@ -49,6 +75,7 @@ header:hover > #name{
 .nav-text a{
     text-decoration: none;
     font-size: 14pt;
-    color: black;
+    color: white;
 
 }
+ /* ################################################################################### */
