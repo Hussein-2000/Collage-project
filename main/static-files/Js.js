@@ -2,12 +2,16 @@
 
 window.addEventListener('scroll', () => {
     let header = document.getElementsByTagName('header')[0];
-    console.log("Hello");
+    let img = document.getElementsByTagName("img")[0];
+
+    console.log(window.pageYOffset);
     
     if (window.pageYOffset > 0) {
         header.classList.add("expand")
-        console.log('object :>> ');
+        img.classList.add("expand")
     } else {
         header.classList.remove("expand")
+        img.classList.remove("expand")
+
     }
 });
