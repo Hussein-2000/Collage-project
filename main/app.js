@@ -12,25 +12,39 @@ const News = require(`./models/news`)
 const app = express();
 // app listening
 
+
+// using static files
+app.set('view engine', 'ejs')
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("./static-files"));
+
 mongoose.connect(api)
 .then(() => 
-{app.listen(2244)
+{app.listen(22444)
   console.log(`Connected to database`)
 })
 
 .catch((err)=> console.log(err))
 
-app.get(`/add` , (req , res) =>{
-  const adding = News({title:`New tittle` , body: `This is our first database.`});
-  adding.save();
-})
+app.get(`/add` , (req , res) =>{})
 
-// using static files
-app.set('view engine' , 'ejs')
-app.use(express.static("./static-files"));
+
 
 //veiwing engine
 
-app.get('/'  , (req, res) =>{
-  res.render("home");
+app.get('/', (req, res) => {
+    const test = "Ali"
+
+    const adding = News({
+        title: `New tittle`,
+        body: `This is our first database.`
+    });
+    adding.save()
+        .then((result) => {
+            console.log(result)
+        })
+        .catch(err => console.log(err))
+
+
+    res.render("home", {test});
 });
