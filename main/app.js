@@ -20,6 +20,11 @@ mongoose.connect(api)
 
 .catch((err)=> console.log(err))
 
+app.get(`/add` , (req , res) =>{
+  const adding = News({title:`New tittle` , body: `This is our first database.`});
+  adding.save();
+})
+
 // using static files
 app.set('view engine' , 'ejs')
 app.use(express.static("./static-files"));
