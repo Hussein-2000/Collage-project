@@ -15,7 +15,7 @@ const app = express();
 mongoose.connect(api)
 .then(() => 
 {app.listen(2244)
-  console.log(`Connected to databaseS`)
+  console.log(`Connected to database`)
 })
 
 .catch((err)=> console.log(err))
