@@ -7,16 +7,16 @@ const api = `mongodb+srv://axd:axmed@collage-project.2reri7s.mongodb.net/?retryW
 
 const News = require(`./models/news`)
 
-
+// using static files
+app.set('view engine', 'ejs')
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("./static-files"));
 
 const app = express();
 // app listening
 
 
-// using static files
-app.set('view engine', 'ejs')
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static("./static-files"));
+
 
 mongoose.connect(api)
 .then(() => 
@@ -26,7 +26,9 @@ mongoose.connect(api)
 
 .catch((err)=> console.log(err))
 
-app.get(`/add` , (req , res) =>{})
+app.get(`/add` , (req , res) =>{
+
+})
 
 
 
