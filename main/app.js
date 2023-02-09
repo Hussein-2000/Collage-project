@@ -29,24 +29,11 @@ app.get(`/add`, (req, res) => {});
 //veiwing engine
 
 app.get("/", (req, res) => {
-    const test = "Ali";
-
-    const dumbdata = {
-        name: "manal",
-        job:"Software Dev"
-    }
-
-  //const adding = News({
-  //  title: `New tittle`,
-  //  body: `This is our first database.`,
-  //});
-
-  //adding.save()
-  //  .then((result) => {
-  //    console.log(result);
-  //  })
-  //  .catch((err) => console.log(err));
-
-  res.render("home", { name:test, data:dumbdata  });
+  News.find()
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => console.log(err));
+  res.render(`home`);
 });
 // hello this is Axmed
