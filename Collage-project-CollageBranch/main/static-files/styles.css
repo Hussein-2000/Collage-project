@@ -1,0 +1,173 @@
+/* Font  */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Colors CSS HEX  */
+:root {
+    --light-cornflower-blue: #8ecae6ff;
+    --blue-green: #219ebcff;
+    --prussian-blue: #023047ff;
+    --selective-yellow: #ffb703ff;
+    --tangerine: #fb8500ff;
+}
+/* Body  */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/*############################################ NavBar ############################################ */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: var(--prussian-blue);
+    height: 230px;
+
+}
+header.expand {
+    height: 70px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+/* Title Animation */
+#JUS-title {
+    height: 0;
+    transition: 1s ease-in-out;
+    text-align: center;
+}
+#JUS-title h1{
+    margin-top: 0;
+    color: var(--selective-yellow);
+}
+header:hover > #JUS-title{
+    display: block;
+    height: 100px;
+}
+
+/* Image Animation */
+.nav-img img {
+    width: 120px;
+    /* transition: 1s ease-in-out; */
+}
+
+.nav-img img.expand{
+    width: 45px;
+    transition: 1s ease-in-out;
+
+}
+
+/* header .nav-text:hover .nav-img img{
+    transition: 1s ease-in-out;
+    width: 150px;
+} */
+
+/* Text  */
+.nav-text{
+    padding: 0;
+}
+.nav-text ul {
+    list-style-type: none;
+    margin: 0;
+}
+.nav-text li{
+    display: inline-block;
+    padding: 10px 9px;
+}
+.nav-text a{
+    text-decoration: none;
+    font-size: 14pt;
+    color: white;
+
+}
+ /* ################################################################################### */
+
+ /* footer ##################################################  */
+
+ footer {
+    display: grid;
+    grid-template-columns: 700px auto;
+    background-color: var(--prussian-blue);
+    color: white;
+    gap: 50px;
+    width: 100%;
+    margin-right: 0;
+
+ }
+
+ footer img {
+    width: 200px;
+ }
+.section1{
+    margin: 10px;
+    margin-right: 10px;
+}
+ .section2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    /* justify-content: center; */
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    
+    
+ }
+ .sec2content2{
+    margin-left: 80px;
+    margin-right: 20px;
+ }
+ .sec2content2 a{
+    text-decoration: none;
+    color: gray;
+    
+ }
+ .sec2content2 a:hover {
+    color: var(--selective-yellow);
+    border-bottom: 1px solid var(--blue-green);
+ }
+ .section2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+ .section2 ul li {
+    padding: 10px 0;
+ }
+ .sec2content2 ul li{
+    padding-bottom: 20px;
+ }
+ 
+
+ .icon {
+    display: flex;
+    gap: 30px;
+    
+ }
+ .icon a {
+    text-decoration: none;
+    color: gray;
+    font-size: 1.5em;
+
+ }
+ /* .grey-c */
+
+
+ .icon-link a {
+    text-decoration: none;
+    color: gray;
+ }
+ .icon a:hover {
+    color: var(--selective-yellow);
+    border-bottom: 1px solid var(--blue-green);
+    
+ }
+ .section2 li{
+    color: gray;
+ }
