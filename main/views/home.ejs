@@ -1,8 +1,12 @@
 <%- include("./partials/navbar.ejs") %> 
 
 <div class="News">
-    <h1> <%= name %> </h1>
-    <h1> <%= data.name , data.job %> </h1>
+    <% if (dbdata.length > 0) { %>
+       <% dbdata.forEach((data) => { %>
+        <h1> <%= data.title %> </h1>
+        <p> <%= data.body %> </p>
+       <% }) %>
+    <% } %>
 </div>
 
 <%- include("./partials/footer.ejs") %> 

@@ -31,9 +31,10 @@ app.get(`/add`, (req, res) => {});
 app.get("/", (req, res) => {
   News.find()
     .then((result) => {
-      console.log(result);
+        console.log(result);
+        res.render(`home`, { dbdata: result });
+
     })
     .catch((err) => console.log(err));
-  res.render(`home`);
 });
 // hello this is Axmed
