@@ -53,15 +53,56 @@ mongoose
 //veiwing engine
 
 app.get("/", (req, res) => {
-    News.find()
-        .then((result) => {
-            console.log(result);
-            res.render(`home`, { dbdata: result });
+
+    
+
+    Events.find().limit(5)
+        .then((result1) => {
+            //console.log(newdata);
+            News.find().limit(5)
+                .then((result2) => {
+                    //console.log(result);
+                    //newdata = result;
+                    res.render(`home`, { dbdata: [result2, result1] });
+
+                })
+                .catch((err) => console.log(err));
 
         })
         .catch((err) => console.log(err));
 })
-// hello this is Axmed
 
 
+
+app.get('/allnews', (req, res) => {
+
+    News.find().limit(5)
+        .then((result) => {
+            res.render('./NewsPages/news', { News: result })
+
+        })
+        .catch((err) => console.log(err));
+
+
+});
+
+app.get("/:id", (req, res) => {
+    let id = req.params.id;
+    console.log("id ... ",id);
+
+    Events.findById(id)
+        .then((ans) => {
+            console.log("ANSWER :: ", ans)
+            if (ans == null) {
+                News.findById(id)
+                    .then((ans2) => {
+                        res.render("./NewsPages/newsdetail", { event: ans2 })
+                    })
+
+            }
+            else
+                res.render("./EventsPages/eventdetail", { event: ans })
+        })
+    
+})
 

@@ -1,10 +1,23 @@
 <%- include("./partials/navbar.ejs") %> 
 
 <div class="News">
-    <% if (dbdata.length > 0) { %>
-       <% dbdata.forEach((data) => { %>
-        <h1> <%= data.title %> </h1>
+    <% if (dbdata[1].length > 0) { %>
+       <% dbdata[1].forEach((data) => { %>
+        <h1> <a href='<%= data._id %>' ><%= data.title %> </a> </h1>
+        
         <p> <%= data.body %> </p>
+       <% }) %>
+    <% } %>
+</div>
+
+<div class="Events">
+    <% if (dbdata[0].length > 0) { %>
+       <% dbdata[0].forEach((data) => { %>
+
+        <h1> <a href='<%= data._id %>' ><%= data.title %> </a> </h1>
+        <p> <%= data.body %> </p>
+        <p> `/$<%= data._id %>` </p>
+
        <% }) %>
     <% } %>
 </div>
