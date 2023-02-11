@@ -6,6 +6,7 @@ const mongoose = require(`mongoose`);
 const api = `mongodb+srv://axd:axmed@collage-project.2reri7s.mongodb.net/?retryWrites=true&w=majority`;
 
 const News = require(`./models/news`);
+const Events = require(`./models/events`);
 const app = express();
 
 // using static files
@@ -24,19 +25,43 @@ mongoose
 
   .catch((err) => console.log(err));
 
-app.get(`/add`, (req, res) => {});
+//app.get(`/add`, (req, res) => {
+
+//    const eventsarray = [{ title: "Match", body: " Monday" },
+//    { title: "Lab event", body: "sunday" },
+//    { title: "Break", body: "holiday" },
+//    { title: "Visit", body: "Party" }];
+
+//    eventsarray.forEach((i) => {
+
+    
+//    const event = Events(i)
+
+//    event.save()
+//        .then((data) => {
+//            console.log(data)
+//        })
+//        .catch((error) => {
+//            console.log(error)
+//        })
+
+//    })
+//    res.send("ADDED TO DB ")
+
+//});
 
 //veiwing engine
 
 app.get("/", (req, res) => {
-  News.find()
-    .then((result) => {
-        console.log(result);
-        res.render(`home`, { dbdata: result });
+    News.find()
+        .then((result) => {
+            console.log(result);
+            res.render(`home`, { dbdata: result });
 
-    })
-    .catch((err) => console.log(err));
-
+        })
+        .catch((err) => console.log(err));
+})
 // hello this is Axmed
+
 
 
