@@ -87,8 +87,8 @@ app.get('/allnews', (req, res) => {
 
 });
 app.get('/Admission', (req, res) => {
-    res.render(`./Admission/Admission`)
-
+    // res.send("Admission")
+    res.render("./Admission/Admission")
 
 });
 
