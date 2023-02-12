@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./static-files"));
 
 // app listening
-
+//this is connecting to the database
 mongoose
   .connect(api)
   .then(() => {
