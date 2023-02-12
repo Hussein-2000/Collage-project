@@ -171,3 +171,14 @@ header:hover > #JUS-title{
  .section2 li{
     color: gray;
  }
+
+ /* Admisson  */
+ .AdmissionReq {
+    padding: 60;
+ }
+
+ .AdmissionReq ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+ }
