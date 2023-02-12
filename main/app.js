@@ -85,6 +85,11 @@ app.get('/allnews', (req, res) => {
 
 
 });
+app.get('/Admission', (req, res) => {
+    res.render(`./Admission/Admission`)
+
+
+});
 
 app.get("/:id", (req, res) => {
     let id = req.params.id;
