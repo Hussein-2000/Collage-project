@@ -1,76 +1,76 @@
 <%- include("../partials/navbar.ejs") %>
 
-<div class="AdmissionReq">
+<div class="apply-req">
+    <div class="AdmissionReq ul-styles">
     
-
-    <ul>
-            <li><div>Fully completed application form. Download from the university website or visit the admission office.</div> </li>
-            <li><div>Proof of payment of a non-refundable application fee.</div> </li>   
-            <li><div>Certified copies of all academic certificates with official transcripts where applicable.</div> </li>
-            <li><div>Certified copy of your National Identification Document or birth certificate.</div> </li>
-
-            <li><div>
-                <h2>Proof of Payment of Application fee US$35.00 ($30 registration free, plus $5 student card) for undergraduate programs.</h2>
-                <h3>University bank details are as follows: </h3>
-                <ul>
-                    <li>Account Name: Somali National University</li>
-                    <li>Bank: Any</li>
-                    <li>Branch Name: Any</li>
-                </ul>
-            </div> </li>
-    </ul>
-
-</div>
-
-<div class="howto">
-    <div class="howtoContent">
-        <h2>How to Apply</h2>
-        <ul class=""></ul>
-        <li>
-            <div>
-                <h3>Obtain application form either by</h3>
-                <ul>
-                    <li>Downloading from the university website or</li>
-                    <li>Request it from email address admissions@snu.edu.so or</li>
-                    <li>Get the form from admissions office at any of the university campuses.</li>
-                </ul>
-            </div>
-        </li>
-
-        <li>
-            <div>
-                <h3>Complete the application form.</h3>
-            </div>
-        </li>
-
-        <li>
-            <div>
-                <h3>Attach all the admission requirements as mentioned</h3>
-            </div>
-        </li>
-
-        <li>
-            <div>
-                <h3>Send the documents to SNU either by:</h3>
-                <ul>
-                    <li>Bring documents to admissions office</li>
-                    <li>Email us scanned copies to admissions@snu.edu.so</li>
-                </ul>
-            </div>
-        </li>
+        <h2 class="leftborder">Admission requirement</h2>
+        <ul class="">
+                <li><div>Fully completed application form. Download from the university website or visit the admission office.</div> </li>
+                <li><div>Proof of payment of a non-refundable application fee.</div> </li>   
+                <li><div>Certified copies of all academic certificates with official transcripts where applicable.</div> </li>
+                <li><div>Certified copy of your National Identification Document or birth certificate.</div> </li>
+    
+                <li><div>
+                    <h4>Proof of Payment of Application fee US$35.00 ($30 registration free, plus $5 student card) for undergraduate programs.</h2>
+                    <h5>University bank details are as follows: </h3>
+                    <ul>
+                        <li>Account Name: Somali National University</li>
+                        <li>Bank: Any</li>
+                        <li>Branch Name: Any</li>
+                    </ul>
+                </div> </li>
+        </ul>
+    
     </div>
+    
+    <div class="howto">
+        <div class="howtoContent ul-styles">
+            <h2 class="leftborder">How to Apply</h2>
+            <ul class="">
+            <li>
+                <div>
+                    <h3>Obtain application form either by</h3>
+                    <ul>
+                        <li>Downloading from the university website or</li>
+                        <li>Request it from email address admissions@snu.edu.so or</li>
+                        <li>Get the form from admissions office at any of the university campuses.</li>
+                    </ul>
+                </div>
+            </li>
+    
+            <li>
+                <div>
+                    <p>Complete the application form.</p>
+                </div>
+            </li>
+    
+            <li>
+                <div>
+                    <p>Attach all the admission requirements as mentioned</p>
+                </div>
+            </li>
+    
+            <li>
+                <div>
+                    <h3>Send the documents to SNU either by:</h3>
+                    <ul>
+                        <li>Bring documents to admissions office</li>
+                        <li>Email us scanned copies to admissions@snu.edu.so</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+    
 </div>
 
 <div class="fees">
     <div class="feescontent">
         <div class="feetext">
             
-            <h2>Application and Admission</h2>
-            <p>The Somali National University is a tuition-free
-            institute instead students pay other charges which helps the university cover for its expenses.
-            </p>
-            <h3>Application fee $30(non-refundable)</h3>
-            <h3>Admission fee is $50 (if a student is admitted)</h3>
+            <h2>Tuition & fees</h2>
+            
         </div>
         <div class="feefaculties">
             <div class="faculty">
@@ -140,7 +140,12 @@
 
 </div>
 
-<div class="admissiomform">
 
+<div class="admissiomform">
+    <button onclick="formbtn()" > Apply Now</button>
+    <form action="" method="post">
+        <h2 id="form"> test</h2>
+    </form>
 </div>
+
 <%- include("../partials/footer.ejs") %>

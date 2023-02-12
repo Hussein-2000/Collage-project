@@ -172,13 +172,90 @@ header:hover > #JUS-title{
     color: gray;
  }
 
+
+.apply-req {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+    /* gap: 10px; */
+}
+
+.howtoContent >  ul li {
+    list-style: none;
+    padding: 8px;
+}
+.howtoContent ul {
+    margin: 0;
+    /* padding: 13px; */
+}
+
+
+.ul-styles {
+    /* margin: 20px 20px; */
+    border-left: 3px solid var(--tangerine);
+    border-radius: 3%;
+    width: 600px;
+    padding: 20px 10px;
+    box-shadow: 2px 0 4px black;
+}
+
+.leftborder {
+    border-left: 5px solid var(--tangerine);
+    padding-left: 20px;
+}
  /* Admisson  */
- .AdmissionReq {
-    padding: 60;
+ .AdmissionReq ul li > div {
+    
+ }
+
+ .AdmissionReq ul li {
+    padding: 5px 0;
  }
 
  .AdmissionReq ul {
     margin: 0;
     list-style: none;
     padding: 0;
+ }
+
+ .fees {
+    padding: 20px;
+ }
+ .feetext h2 {
+    border-left: 4px solid var(--tangerine);
+    padding-left: 10px;
+ }
+
+ .feescontent {
+    margin-bottom: 40px;
+ }
+ .feefaculties {
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+
+ }
+
+ .faculty {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    box-shadow: 2px 0 3px black;
+    background-color: var(--blue-green);
+    color: #ffff;
+    border-radius: 3%;
+ }
+ .faculty p {
+    margin-bottom: 0;
+ }
+
+ .faculty h3 {
+    margin: 0;
+    padding: 20px;
+    color: white;
+ }
+
+ .form{
+    background-color: aqua;
  }
