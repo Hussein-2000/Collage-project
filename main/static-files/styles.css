@@ -352,9 +352,12 @@ input{
 
 /* About Us style  */
 
-.Rector-Messege {
+.Rector-Messege, .SNU-HISTORY ,.Vissio-Mission {
    width: 750px;
    margin: 60px auto;
+   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+   padding: 10px;
+   background-color:rgba(237, 243, 248, 0.435);
 }
 .Rector-Messege figure{
    text-align: center;
@@ -374,4 +377,29 @@ input{
 }
 .Rector-Messege figure h4{
    margin: 2px ;
+}
+.messege  {
+   margin-left: 50px;
+   margin-right: 40px;
+   text-align: justify;
+}
+.foot{
+   margin-top: 50px;
+   margin-bottom: 40px;
+}
+.foot h2{
+   margin: 4px;
+   font-size: 1.1em;
+}
+.SNU-HISTORY , .Vissio-Mission{
+   text-align: justify;
+   padding-left: 50px;
+   padding-right: 40px;
+   width: 685px;
+}
+.SNU-HISTORY h2 , .Vissio-Mission h2{
+   margin-bottom: 20px;
+   border-left: 3px solid var(--tangerine);
+   padding-left: 14px;
+
 }
