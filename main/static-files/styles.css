@@ -387,6 +387,9 @@ input{
 .foot{
    margin-top: 50px;
    margin-bottom: 40px;
+   border-top: 2px solid var(--blue-green) ;
+   width: 300px;
+   padding-top: 10px;
 }
 .foot h2{
    margin: 4px;
