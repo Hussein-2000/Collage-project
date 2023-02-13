@@ -91,25 +91,30 @@ app.get('/Admission', (req, res) => {
     res.render("./Admission/Admission")
 
 });
+app.get('/Admission-Form', (req, res) => {
+    // res.send("Admission")
+    res.render("./Admission/AdmissionForm")
 
-app.get("/:id", (req, res) => {
-    let id = req.params.id;
-    console.log("id ... ",id);
+});
 
-    Events.findById(id)
-        .then((ans) => {
-            console.log("ANSWER :: ", ans)
-            if (ans == null) {
-                News.findById(id)
-                    .then((ans2) => {
-                        res.render("./NewsPages/newsdetail", { event: ans2 })
-                    })
+// app.get("/:id", (req, res) => {
+//     let id = req.params.id;
+//     console.log("id ... ",id);
 
-            }
-            else
-                res.render("./EventsPages/eventdetail", { event: ans })
-        })
+//     Events.findById(id)
+//         .then((ans) => {
+//             console.log("ANSWER :: ", ans)
+//             if (ans == null) {
+//                 News.findById(id)
+//                     .then((ans2) => {
+//                         res.render("./NewsPages/newsdetail", { event: ans2 })
+//                     })
+
+//             }
+//             else
+//                 res.render("./EventsPages/eventdetail", { event: ans })
+//         })
     
-})
+// })
 
 //Hello ahmed

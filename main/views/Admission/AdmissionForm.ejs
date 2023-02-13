@@ -1,0 +1,178 @@
+<%- include("../partials/navbar.ejs") %>
+
+<div class="Admission_Form">
+    <h1>Jaamacadda Ummadda Soomaaliyeed </h1>
+    <h3>New student registration form</h3>
+
+    <form action="" method="">
+        <div class="FirstName">
+            <label for="FirstName">First Name: </label>
+            <input type="text" name="FirstName" id="FirstName" required>
+            <label for="LastName">Last Name: </label>
+            <input type="text" name="LastName" id="LastName" required>
+        </div>
+        <div>
+            <label for="MotherName">Mother Name: </label>
+            <input type="text" name="MotherName" id="MotherName">
+        </div>
+        <div>
+            <label for="PalceBirth">Place of birth: </label>
+            <input type="text" name="PalceBirth" id="PalceBirth">
+        </div>
+        <div>
+            <label for="DateBirth">Date of birth: </label>
+            <input type="date" name="DateBirth" id="DateBirth">
+        </div>
+        <div>
+            <label for="Deegaanka">Deegaanka: </label>
+            <input type="text" name="Deegaanka" id="Deegaanka">
+        </div>
+        <div>
+            <label for="Email">E-mail: </label>
+            <input type="email" name="Email" id="Email">
+        </div>
+        <div>
+            <label for="Phone">Phone number: </label>
+            <input type="tel" name="Phone" id="Phone" placeholder="Enter your number">
+            <input type="tel" name="Phone" id="Phone" placeholder="Enter your second number">
+        </div>
+        <div>
+            <label for="Masuulka">Mas'ulka ardayga: </label>
+            <input type="text" name="Masuulka" id="Masuulka" placeholder="Magaca mas'uulka">
+            <input type="tel" name="Masuulka" id="Masuulka" placeholder="Phone number">
+        </div>
+        <div>
+            <label for="Roll-Number">Roll number: </label>
+            <input type="text" name="Roll-Number" id="Roll-Number">
+        </div>
+        <div class="Faculties">
+            <label for="Faculties">Choose faculties: </label>
+            <div class="First">
+                <select id="Faculty">
+                    <option value="Computer science">Choose your faculty</option>
+
+                    <optgroup label="Faculty of science">
+                        <option value="Computer science">Computer science</option>
+                        <option value="Geology">Geology</option>
+                        <option value="Marine">Marine</option>
+                        <option value="Mathematics">Mathematics</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Engineering">
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Archituctural Engineering">Archituctural Engineering</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Medicine">
+                        <option value="Medicine and sergury">Medicine and sergury</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Economics">
+                        <option value="Accounting">Accounting</option>
+                        <option value="Bank and Finance">Bank and Finance</option>
+                        <option value="Bure economics">Bure economics</option>
+                        <option value="Stastistics">Stastistics</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Veterinary">
+                        <option value="Animal and husbendary">Computer science</option>
+                        <option value="Animal medicine">Animal medicine</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Agriculture">
+                        <option value="Agricultural science">Agricultural science</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Law">
+                        <option value="Law">Law</option>
+                    </optgroup>
+                    <optgroup label="Faculty of social science">
+                        <option value="Political science">Political science</option>
+                        <option value="Social work">Social work</option>
+                        <option value="Jouranalism">Jouranalism</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Health Sciences">
+                        <option value="Health science">Health science</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Education">
+                        <option value="Math and physics">Math and physics</option>
+                        <option value="Biology and chemistry">Biology and chemistry</option>
+                        <option value="Chemistry and Biology">Chemistry and Biology</option>
+                        <option value="Geography and history">Geography and history</option>
+                        <option value="History and english">History and english</option>
+                        <option value="English and litrature">English and litrature</option>
+                        <option value="Arabic and litrature">Arabic and litrature</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="Second">
+                <select id="Faculty">
+                    <option value="Computer science">Choose your second choice</option>
+                    <optgroup label="Faculty of Veterinary">
+                        <option value="Animal and husbendary">Computer science</option>
+                        <option value="Animal medicine">Animal medicine</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Agriculture">
+                        <option value="Agricultural science">Agricultural science</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Law">
+                        <option value="Law">Law</option>
+                    </optgroup>
+                    <optgroup label="Faculty of social science">
+                        <option value="Political science">Political science</option>
+                        <option value="Social work">Social work</option>
+                        <option value="Jouranalism">Jouranalism</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Health Sciences">
+                        <option value="Health science">Health science</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Education">
+                        <option value="Math and physics">Math and physics</option>
+                        <option value="Biology and chemistry">Biology and chemistry</option>
+                        <option value="Chemistry and Biology">Chemistry and Biology</option>
+                        <option value="Geography and history">Geography and history</option>
+                        <option value="History and english">History and english</option>
+                        <option value="English and litrature">English and litrature</option>
+                        <option value="Arabic and litrature">Arabic and litrature</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="Third">
+                <select id="Faculty" required>
+                    <option value="Computer science">Choose your third choice</option>
+                    <optgroup label="Faculty of Veterinary">
+                        <option value="Animal and husbendary">Computer science</option>
+                        <option value="Animal medicine">Animal medicine</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Agriculture">
+                        <option value="Agricultural science">Agricultural science</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Law">
+                        <option value="Law">Law</option>
+                    </optgroup>
+                    <optgroup label="Faculty of social science">
+                        <option value="Political science">Political science</option>
+                        <option value="Social work">Social work</option>
+                        <option value="Jouranalism">Jouranalism</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Health Sciences">
+                        <option value="Health science">Health science</option>
+                    </optgroup>
+                    <optgroup label="Faculty of Education">
+                        <option value="Math and physics">Math and physics</option>
+                        <option value="Biology and chemistry">Biology and chemistry</option>
+                        <option value="Chemistry and Biology">Chemistry and Biology</option>
+                        <option value="Geography and history">Geography and history</option>
+                        <option value="History and english">History and english</option>
+                        <option value="English and litrature">English and litrature</option>
+                        <option value="Arabic and litrature">Arabic and litrature</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+
+
+
+
+
+<%- include("../partials/footer.ejs") %>
