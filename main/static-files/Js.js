@@ -15,7 +15,10 @@ window.addEventListener('scroll', () => {
 
     }
 });
+<<<<<<< HEAD
 
 const formbtn = () => {
     window.open("https://www.google.com");
 }
+=======
+>>>>>>> 8c8f1b8abaf14f28ba6a035fc0c438cd972df8ee

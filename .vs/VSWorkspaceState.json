@@ -1,5 +1,6 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     "",
     "\\main",
     "\\main\\models",
@@ -9,5 +10,9 @@
     "\\main\\views\\partials"
   ],
   "SelectedNode": "\\Collage-project-CollageBranch",
+=======
+    ""
+  ],
+>>>>>>> 8c8f1b8abaf14f28ba6a035fc0c438cd972df8ee
   "PreviewInSolutionExplorer": false
 }

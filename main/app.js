@@ -4,6 +4,7 @@ const express = require(`express`);
 const mongoose = require(`mongoose`);
 
 const api = `mongodb+srv://axd:axmed@collage-project.2reri7s.mongodb.net/?retryWrites=true&w=majority`;
+<<<<<<< HEAD
 
 const News = require(`./models/news`);
 const Events = require(`./models/events`);
@@ -17,12 +18,26 @@ app.use(express.static("./static-files"));
 // app listening
 //this is connecting to the database
 
+=======
+
+const News = require(`./models/news`);
+const app = express();
+
+// using static files
+app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("./static-files"));
+
+// app listening
+
+>>>>>>> 8c8f1b8abaf14f28ba6a035fc0c438cd972df8ee
 mongoose
   .connect(api)
   .then(() => {
     app.listen(22444);
     console.log(`Connected to database`);
   })
+<<<<<<< HEAD
 
   .catch((err) => console.log(err));
 
@@ -94,3 +109,28 @@ app.get('/Admission', (req, res) => {
 
 // clear
 
+=======
+
+  .catch((err) => console.log(err));
+
+app.get(`/add`, (req, res) => {});
+
+//veiwing engine
+
+app.get("/", (req, res) => {
+  const test = "Ali";
+
+  const adding = News({
+    title: `New tittle`,
+    body: `This is our first database.`,
+  });
+  adding
+    .save()
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => console.log(err));
+
+  res.render("home", { test });
+});
+>>>>>>> 8c8f1b8abaf14f28ba6a035fc0c438cd972df8ee
