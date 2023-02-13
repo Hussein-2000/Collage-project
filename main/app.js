@@ -96,6 +96,11 @@ app.get('/Admission-Form', (req, res) => {
     res.render("./Admission/AdmissionForm")
 
 });
+app.get('/About', (req, res) => {
+    // res.send("Admission")
+    res.render("about")
+
+});
 
 // app.get("/:id", (req, res) => {
 //     let id = req.params.id;

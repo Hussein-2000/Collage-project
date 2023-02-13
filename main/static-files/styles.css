@@ -221,9 +221,13 @@ header:hover > #JUS-title{
  .fees {
     padding: 20px;
  }
- .feetext h2 {
-    border-left: 4px solid var(--tangerine);
+ 
+.center{
+   border-left: 4px solid var(--tangerine);
     padding-left: 10px;
+   font-weight: 700;
+   font-size: 20pt;
+   margin-left: 550px;
  }
 
  .feescontent {
@@ -256,9 +260,24 @@ header:hover > #JUS-title{
     color: white;
  }
 
- .form{
-    background-color: aqua;
+ .click-button{
+    margin-bottom: 30px;
+    border: none;
+    font-size: large;
+   font-weight: 700;
+   border-radius: 20px;
+   background-color: var(--selective-yellow);
+   padding: 10px 30px;
  }
+ .click-button:hover{
+   padding: 10px 30px;
+   background-color: var(--blue-green);
+
+ }
+ .admissiomform
+{
+   text-align: center;
+}
 
  /* Form style  */
 
@@ -312,7 +331,7 @@ input{
    width: 150px;
    margin-right: 5px;
 }
-button{
+.button{
    width: 400px;
    padding: 10px 16px;
    background-color: var(--blue-green);
@@ -324,7 +343,35 @@ button{
    margin-top: 25px;
 
 }
-button:hover{
+.button:hover{
    background-color: var(--tangerine);
    color: white;  
+}
+
+
+
+/* About Us style  */
+
+.Rector-Messege {
+   width: 750px;
+   margin: 60px auto;
+}
+.Rector-Messege figure{
+   text-align: center;
+   margin-bottom: 20px;
+   padding: 10px;
+}
+.Rector-Messege figure img{
+   border-radius: 50%;
+   width: 150px;
+
+}
+.Rector-Messege figure figcaption{
+   font-size: 14pt;
+   font-weight: 600;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+.Rector-Messege figure h4{
+   margin: 2px ;
 }
