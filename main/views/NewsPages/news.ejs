@@ -1,0 +1,16 @@
+<%- include("../partials/navbar.ejs") %> 
+
+<div class="News">
+    <% if (News.length > 0) { %>
+       <% News.forEach((data) => { %>
+        <h1> <a href='<%= data._id %>' ><%= data.title %> </a> </h1>
+        
+        <p> <%= data.body %> </p>
+       <% }) %>
+    <% } %>
+</div>
+     
+     
+
+
+<%- include("../partials/footer.ejs") %> 
