@@ -106,11 +106,9 @@ app.get('/Admission-Form', (req, res) => {
     res.render("./Admission/AdmissionForm")
 
 });
-// upload.array("files", 3)
-app.post('/Admission-Form' , (req, res) => {
+
+app.post('/Admission-Form',upload.array("files", 3) , (req, res) => {
     console.log("REQ BODY", req.body);
-    // console.log(req.body.DateBirth);
-    // const userdate = new Date(req.body.DateBirth) 
     const form_submit = admissionDb(req.body)
 
     form_submit.save()
