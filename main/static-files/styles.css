@@ -356,9 +356,10 @@ input{
 .Rector-Messege, .SNU-HISTORY ,.Vissio-Mission {
    width: 750px;
    margin: 60px auto;
-   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
    padding: 10px;
    background-color:rgba(237, 243, 248, 0.435);
+   border-left: 2px solid var(--prussian-blue);
 }
 .Rector-Messege figure{
    text-align: center;
