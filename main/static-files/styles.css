@@ -22,6 +22,8 @@ body{
 /*############################################ NavBar ############################################ */
 header {
     display: flex;
+    position: absolute;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -33,7 +35,7 @@ header {
 header.expand {
     height: 70px;
     top: 0;
-    position: fixed;
+    /* position: sticky; */
     width: 100%;
 }
 /* Title Animation */
@@ -48,7 +50,7 @@ header.expand {
 }
 header:hover > #JUS-title{
     display: block;
-    height: 100px;
+    /* height: 100px; */
 }
 
 /* Image Animation */
@@ -87,6 +89,36 @@ header:hover > #JUS-title{
 
 }
  /* ################################################################################### */
+
+ /* News ##################################################################################*/
+.home-img {
+   width: 100%;
+   padding-top: 100px;
+}
+.home-img img {
+   width: 100%;
+   object-fit: contain;
+}
+
+.News{
+   width: 100%;
+}
+.News-contents {
+   display: flex;
+   overflow: scroll;
+   width: auto;
+   position: relative;
+   /* z-index: 0;*/
+}
+.headline-img {
+   z-index: 1;
+   position: relative;
+}
+.headline-text {
+   z-index: 2;
+   position: absolute;
+   
+}
 
  /* footer ##################################################  */
 

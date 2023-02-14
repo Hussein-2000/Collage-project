@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
 
     console.log(window.pageYOffset);
     
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > 10) {
         header.classList.add("expand")
         img.classList.add("expand")
     } else {

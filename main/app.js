@@ -50,42 +50,17 @@ mongoose
 
   .catch((err) => console.log(err));
 
-//app.get(`/add`, (req, res) => {
 
-//    const eventsarray = [{ title: "Match", body: " Monday" },
-//    { title: "Lab event", body: "sunday" },
-//    { title: "Break", body: "holiday" },
-//    { title: "Visit", body: "Party" }];
 
-//    eventsarray.forEach((i) => {
-
-    
-//    const event = Events(i)
-
-//    event.save()
-//        .then((data) => {
-//            console.log(data)
-//        })
-//        .catch((error) => {
-//            console.log(error)
-//        })
-
-//    })
-//    res.send("ADDED TO DB ")
-
-//});
 
 //veiwing engine
-
 app.get("/", (req, res) => {
 
     Events.find().limit(5)
         .then((result1) => {
-            //console.log(newdata);
             News.find().limit(5)
                 .then((result2) => {
-                    res.render(`home`, { dbdata: [result2, result1] });
-
+                    res.render(`home`, { dbdata: [result1, result2] });
                 })
                 .catch((err) => console.log(err));
 

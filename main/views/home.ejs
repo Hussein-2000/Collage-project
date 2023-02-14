@@ -1,13 +1,19 @@
 <%- include("./partials/navbar.ejs") %> 
-
+ <div class="home-img"><img src="IMG_5436.jpg" alt="asdf"> </div>
 <div class="News">
-    <% if (dbdata[1].length > 0) { %>
-       <% dbdata[1].forEach((data) => { %>
-        <h1> <a href='<%= data._id %>' ><%= data.title %> </a> </h1>
-        
-        <p> <%= data.body %> </p>
-       <% }) %>
-    <% } %>
+    <h1> News</h1>
+    <div class="News-contents">
+        <% if (dbdata[1].length > 0) { %>
+           <% dbdata[1].forEach((data) => { %>
+            <div class="headline-img"><img src="FMxXGkuXwAchWv0.jfif" alt=""></div>
+            <div class="headline-text">
+                
+                <h1> <a href='<%= data._id %>' ><%= data.title %> </a> </h1>
+                <p> <%= data.body %> </p>
+            </div>
+           <% }) %>
+        <% } %>
+    </div>
 </div>
 
 <div class="Events">
