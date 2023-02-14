@@ -7,6 +7,7 @@ const app = express();
 // modules 
 const News = require(`./models/news`);
 const Events = require(`./models/events`);
+const admissionDb = require('./models/Admissiondb')
 
 // handle file uploads 
 const multer = require('multer');
@@ -105,14 +106,23 @@ app.get('/Admission-Form', (req, res) => {
     res.render("./Admission/AdmissionForm")
 
 });
+// upload.array("files", 3)
+app.post('/Admission-Form' , (req, res) => {
+    console.log("REQ BODY", req.body);
+    // console.log(req.body.DateBirth);
+    // const userdate = new Date(req.body.DateBirth) 
+    const form_submit = admissionDb(req.body)
 
-app.post('/Admission-Form', upload.array("files",3), (req, res) => {
-    // res.send("Admission")
-    console.log("Form is Submitted");
-    console.log(req.method);
-    console.log(req.body);
-
-    res.render("./Admission/AdmissionForm")
+    form_submit.save()
+    .then((result) => {
+        // console.log('userdate :>> ', userdate);
+        console.log('result :>> ', result);
+        res.send(result);
+    })
+    .catch((err) => {
+        res.send(err)
+    });
+    // res.render("./Admission/AdmissionForm")
 
     // res.redirect('/')
 });

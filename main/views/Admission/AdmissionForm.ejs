@@ -24,8 +24,8 @@
                 </p>
             </div>
             <div>
-                <label for="PalceBirth">Place of birth: </label>
-                <input type="text" name="PalceBirth" id="PalceBirth" placeholder="place of birth">
+                <label for="PlaceBirth">Place of birth: </label>
+                <input type="text" name="PlaceBirth" id="PalceBirth" placeholder="place of birth">
             </div>
             <div>
                 <label for="DateBirth">Date of birth: </label>
@@ -41,23 +41,23 @@
             </div>
             <div>
                 <label for="Phone">Phone number: </label>
-                <input type="tel" name="Phone" id="Phone" placeholder="Enter your number">
-                <input type="tel" name="Phone" id="Phone" placeholder="Enter your second number">
+                <input type="number" name="Phone" id="Phone" placeholder="Enter your number">
+                <input type="number" name="Phone" id="Phone" placeholder="Enter your second number">
             </div>
             <div>
                 <label for="Masuulka">Mas'ulka ardayga: </label>
                 <input type="text" name="Masuulka" id="Masuulka" placeholder="Magaca mas'uulka">
-                <input type="tel" name="Masuulka" id="Masuulka" placeholder="Phone number">
+                <input type="number" name="Masuulka" id="Masuulka" placeholder="Phone number">
             </div>
             <div>
                 <label for="RollNumber">Roll number: </label>
                 <input type="text" name="RollNumber" id="Roll-Number" placeholder="Roll number">
             </div>
             <div class="Faculties">
-                <label for="Faculties">Choose faculties: </label>
+                <label for="faculty" >Choose faculties: </label>
                 <div class="ALL">
                     <div class="First">
-                        <select id="Faculty">
+                        <select id="Faculty" name="faculty">
                             <option value="Computer science">Choose your faculty</option>
 
                             <optgroup label="Faculty of science">
@@ -111,7 +111,7 @@
                         </select>
                     </div>
                     <div class="Second">
-                        <select id="Faculty">
+                        <select id="Faculty" name="faculty">
                             <option value="Computer science">Second choice</option>
                             <optgroup label="Faculty of Veterinary">
                                 <option value="Animal and husbendary">Computer science</option>
@@ -143,7 +143,7 @@
                         </select>
                     </div>
                     <div class="Third">
-                        <select id="Faculty" required>
+                        <select id="Faculty" name="faculty">
                             <option value="Computer science">Third choice</option>
                             <optgroup label="Faculty of Veterinary">
                                 <option value="Animal and husbendary">Computer science</option>
