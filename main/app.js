@@ -124,22 +124,22 @@ app.post('/Admission-Form', admissionUpload.array("file", 3) , (req, res) => {
     console.log(files);
 
     const form_submit = admissionDb({
-        // FirstName: req.body.FirstName,
-        // LastName: req.body.LastName,
-        // sex: req.body.sex,
-        // PlaceOfBirth: req.body.PlaceOfBirth,
-        // MotherName: req.body.MotherName,
-        // DateBirth: req.body.DateBirth,
-        // Deegaanka: req.body.Deegaanka,
-        // Masuulka: req.body.Masuulka,    
-        // Email: req.body.Email,
-        // Phone: req.body.Phone,
-        // RollNumber: req.body.RollNumber,
-        // faculty: req.body.faculty,
+        FirstName: req.body.FirstName,
+        LastName: req.body.LastName,
+        sex: req.body.sex,
+        PlaceOfBirth: req.body.PlaceOfBirth,
+        MotherName: req.body.MotherName,
+        DateBirth: req.body.DateBirth,
+        Deegaanka: req.body.Deegaanka,
+        Masuulka: req.body.Masuulka,    
+        Email: req.body.Email,
+        Phone: req.body.Phone,
+        RollNumber: req.body.RollNumber,
+        faculty: req.body.faculty,
 
-        img_file_data: { data: files[0].buffer, contentType: files[0].mimetype },
-        Birth_file_data: { data: files[1].buffer, contentType: files[1].mimetype },
-        HighScl_file_data: { data: files[2].buffer, contentType: files[2].mimetype },
+        // img_file_data: { data: files[0].buffer, contentType: files[0].mimetype },
+        // Birth_file_data: { data: files[1].buffer, contentType: files[1].mimetype },
+        // HighScl_file_data: { data: files[2].buffer, contentType: files[2].mimetype },
 
     })
     
