@@ -12,18 +12,11 @@ const admissionDb = require('./models/Admissiondb')
 // handle file uploads 
 const multer = require('multer');
 // const storage = multer.memoryStorage();
-// const upload = multer({ dest:"uploads/"})
+const upload = multer({ dest:"uploads/"})
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, "uploads/");
-    },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + "-" + Date.now());
-    }
-  });
+
   
-  const admissionUpload = multer({ storage });
+//   const admissionUpload = multer({ storage });
 
 
 const api = `mongodb+srv://axd:axmed@collage-project.2reri7s.mongodb.net/?retryWrites=true&w=majority`;
@@ -118,7 +111,7 @@ app.get('/Admission-Form', (req, res) => {
 
 });
 
-app.post('/Admission-Form', admissionUpload.array("file", 3) , (req, res) => {
+app.post('/Admission-Form', upload.array("files", 3) , (req, res) => {
     console.log("REQ BODY", req.body);
     const files = req.files;
     console.log(files);
@@ -137,9 +130,9 @@ app.post('/Admission-Form', admissionUpload.array("file", 3) , (req, res) => {
         RollNumber: req.body.RollNumber,
         faculty: req.body.faculty,
 
-        // img_file_data: { data: files[0].buffer, contentType: files[0].mimetype },
-        // Birth_file_data: { data: files[1].buffer, contentType: files[1].mimetype },
-        // HighScl_file_data: { data: files[2].buffer, contentType: files[2].mimetype },
+        img_file_data: { data: files[0].buffer },
+        Birth_file_data: { data: files[1].buffer },
+        HighScl_file_data: { data: files[2].buffer },
 
     })
     
