@@ -2,17 +2,25 @@
 const express = require(`express`);
 //importing mongoose as a database
 const mongoose = require(`mongoose`);
-
-const api = `mongodb+srv://axd:axmed@collage-project.2reri7s.mongodb.net/?retryWrites=true&w=majority`;
-
-const News = require(`./models/news`);
-const Events = require(`./models/events`);
 const app = express();
 
+// modules 
+const News = require(`./models/news`);
+const Events = require(`./models/events`);
+
+// handle file uploads 
+const multer = require('multer');
+const storage = multer.memoryStorage();
+const upload = multer({Storage:storage})
+
+
+const api = `mongodb+srv://axd:axmed@collage-project.2reri7s.mongodb.net/?retryWrites=true&w=majority`;
 // using static files
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("./static-files"));
+
+
 
 // app listening
 //this is connecting to the database
@@ -21,7 +29,8 @@ mongoose
   .connect(api)
   .then(() => {
     app.listen(22444);
-    console.log(`Connected to database`);
+    console.log('Connected to database');
+    console.log("PORT: 22444");
   })
 
   .catch((err) => console.log(err));
@@ -96,6 +105,18 @@ app.get('/Admission-Form', (req, res) => {
     res.render("./Admission/AdmissionForm")
 
 });
+
+app.post('/Admission-Form', upload.array("files",3), (req, res) => {
+    // res.send("Admission")
+    console.log("Form is Submitted");
+    console.log(req.method);
+    console.log(req.body);
+
+    res.render("./Admission/AdmissionForm")
+
+    // res.redirect('/')
+});
+
 app.get('/About', (req, res) => {
     // res.send("Admission")
     res.render("about")
