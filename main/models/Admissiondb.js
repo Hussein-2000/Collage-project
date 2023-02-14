@@ -14,9 +14,9 @@ const Admissionschema = new Schema({
     Masuulka:[{type:String, requried: true}],
     RollNumber:{type:Number, requried: true},
     faculty:[{type:String, required:true}],
-    img_file_data:{type:Buffer, contentType:String,requried: true},
-    Birth_file_data:{type:Buffer, contentType:String,requried: true},
-    HighScl_file_data:{type:Buffer, contentType:String,requried: true},
+    img_file_data:{type:String},
+    Birth_file_data:{type:String},
+    HighScl_file_data:{type:String},
 })
 
 const AdmissionModel = mongoose.model("Admission", Admissionschema);

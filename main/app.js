@@ -12,9 +12,19 @@ const admissionDb = require('./models/Admissiondb')
 // handle file uploads 
 const multer = require('multer');
 // const storage = multer.memoryStorage();
-const upload = multer({ dest:"uploads/"})
+// const upload = multer({storage:storage});
 
+let storage = multer.diskStorage({
+    destination:(req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename:(req, file, cb) => {
+        const notype = file.originalname.split(".")
+        cb(null, notype[0]+'.'+notype[1]) 
+    }
+})
 
+let upload = multer({storage:storage});
   
 //   const admissionUpload = multer({ storage });
 
@@ -31,7 +41,7 @@ app.use(express.static("./static-files"));
 //this is connecting to the database
 
 mongoose
-  .connect(api)
+  .connect(api, { useNewUrlParser: true })
   .then(() => {
     app.listen(22444);
     console.log('Connected to database');
@@ -69,15 +79,11 @@ mongoose
 
 app.get("/", (req, res) => {
 
-    
-
     Events.find().limit(5)
         .then((result1) => {
             //console.log(newdata);
             News.find().limit(5)
                 .then((result2) => {
-                    //console.log(result);
-                    //newdata = result;
                     res.render(`home`, { dbdata: [result2, result1] });
 
                 })
@@ -115,6 +121,10 @@ app.post('/Admission-Form', upload.array("files", 3) , (req, res) => {
     console.log("REQ BODY", req.body);
     const files = req.files;
     console.log(files);
+    const file1 = files[0];
+    const file2 = files[1];
+    const file3 = files[2];
+    console.log(file1.path );
 
     const form_submit = admissionDb({
         FirstName: req.body.FirstName,
@@ -130,9 +140,9 @@ app.post('/Admission-Form', upload.array("files", 3) , (req, res) => {
         RollNumber: req.body.RollNumber,
         faculty: req.body.faculty,
 
-        img_file_data: { data: files[0].buffer },
-        Birth_file_data: { data: files[1].buffer },
-        HighScl_file_data: { data: files[2].buffer },
+        img_file_data: file1.path,
+        Birth_file_data:  file2.path ,
+        HighScl_file_data: file3.path ,
 
     })
     
