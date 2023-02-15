@@ -104,6 +104,12 @@ header:hover > #JUS-title{
 .News{
    width: 100%;
 }
+.News > h1{
+   margin: 0;
+   padding: 20px;
+   width: 100%;
+   background-color: midnightblue;
+}
 
 .News-wrapper{
    /* overflow: hidden; */
@@ -123,12 +129,11 @@ header:hover > #JUS-title{
    width: auto;
 }
 .top-blur{
-   width: 100%;
+   width: 1080px;
    z-index: 0;
    top: 0;
    height: 250px;
-   background-color: aliceblue;
-   /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.521) 0%, rgba(107,106,106,0) 100%); */
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.521) 0%, rgba(107,106,106,0) 100%);
    position: absolute;
 }
 .headline-text {
@@ -136,7 +141,11 @@ header:hover > #JUS-title{
    position: absolute;
    color: white;
    width: 100%;
-   
+}
+
+.headline-text a {
+   text-decoration: none;
+   color: white;
 }
 
  /* footer ##################################################  */
