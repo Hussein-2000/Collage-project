@@ -4,13 +4,20 @@
     <h1> News</h1>
     <div class="News-contents">
         <% if (dbdata[1].length > 0) { %>
+
            <% dbdata[1].forEach((data) => { %>
-            <div class="headline-img"><img src="FMxXGkuXwAchWv0.jfif" alt=""></div>
+            <div class="News-Wrapper">
+
             <div class="headline-text">
-                
+
                 <h1> <a href='<%= data._id %>' ><%= data.title %> </a> </h1>
                 <p> <%= data.body %> </p>
             </div>
+            <div class="headline-img"><img src="FMxXO1SXwAMt_Hi.jfif" alt="">
+                <div class="top-blur"></div>
+
+            </div>
+        </div>
            <% }) %>
         <% } %>
     </div>
