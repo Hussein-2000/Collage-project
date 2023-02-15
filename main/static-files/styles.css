@@ -460,3 +460,36 @@ input{
 
 }
 
+
+/* ########## Acadmics ################### */
+.figure {
+   margin: 0;
+   padding: 0;
+}
+.figure {
+   margin-top: 10em;
+   background-color: #003466;
+   width: 250px;
+   padding: 50px 40px 50px 30px;
+   margin-bottom: 50px;
+   margin-left: 5em;
+
+}
+.figure figcaption {
+   color: white;
+   font-size: 24pt;
+   font-weight: 900;
+
+}
+.undergraduate-programs img.ENG {
+   width: 850px;
+   height: 262px;
+   margin-top: 10em;
+   margin-bottom: 50px;
+
+}
+.undergraduate-programs {
+   display: flex;
+}
+
+

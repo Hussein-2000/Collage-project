@@ -43,7 +43,7 @@ app.use(express.static("./static-files"));
 mongoose
   .connect(api, { useNewUrlParser: true })
   .then(() => {
-    app.listen(22444);
+    app.listen(3000);
     console.log('Connected to database');
     console.log("PORT: 22444");
   })
@@ -139,6 +139,12 @@ app.post('/Admission-Form', upload.array("files", 3) , (req, res) => {
 app.get('/About', (req, res) => {
     // res.send("Admission")
     res.render("about")
+
+});
+
+app.get('/Academic', (req, res) => {
+    // res.send("Admission")
+    res.render("./Academics/academics")
 
 });
 
