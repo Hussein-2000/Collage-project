@@ -45,12 +45,10 @@ mongoose
   .then(() => {
     app.listen(3000);
     console.log('Connected to database');
-    console.log("PORT: 22444");
+    console.log("PORT: 3000");
   })
 
   .catch((err) => console.log(err));
-
-
 
 
 //veiwing engine
